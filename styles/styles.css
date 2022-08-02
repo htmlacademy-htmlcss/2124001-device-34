@@ -64,13 +64,25 @@ h2 {
   font-size: 18px ;
   line-height: 21px ;
   letter-spacing: 3.5px;
-  text-transform: uppercase;
+
   color: #000000;
   margin: 0;
 }
 
 button {
   cursor: pointer;
+}
+
+.condition-texts:hover {
+  color: rgba(0, 0, 0, 0.6);
+}
+
+.condition-texts:active {
+  color: rgba(0, 0, 0, 0.3);
+}
+
+.condition-texts:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 .body {
@@ -95,19 +107,6 @@ button {
   margin-right: 140px;
 }
 
-.logo-link:hover {
-  fill: rgba(0, 0, 0, 0.6);
-}
-
-.logo-link:active {
-  fill: rgba(0, 0, 0, 0.3);
-}
-
-.logo-link:focus {
-  outline-color: #AF4FFF;
-}
-
-
 .navigation {
   background-color: #FFE17F;
   width: 1040px;
@@ -120,6 +119,20 @@ button {
 .logo-link {
   position: absolute;
   top: 20px;
+}
+
+.logo-link:hover {
+  opacity: 0.6;
+  color: #000000;
+}
+
+.logo-link:active {
+  opacity: 0.3;
+  color: #000000;
+}
+
+.logo-link:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 .search-form {
@@ -150,7 +163,7 @@ button {
   outline: none;
 }
 
-.field:focus {
+.field:focus-visible {
   background-color: #FFE17F;
   outline: 2px solid #AF4FFF
 }
@@ -196,8 +209,8 @@ button {
   color: rgba(255, 255, 255, 0.3);
 }
 
-.button-search-form:focus {
-
+.button-search-form:focus-visible {
+  outline: 2px solid #AF4FFF
 }
 
 .first-line {
@@ -234,6 +247,10 @@ button {
   margin-left: 26px;
 }
 
+.navigation-item-equalize {
+  margin-left: auto;
+}
+
 .navigation-link:hover {
   fill: rgba(0, 0, 0, 0.6);
   color: rgba(0, 0, 0, 0.6);
@@ -244,26 +261,45 @@ button {
   color: rgba(0, 0, 0, 0.3);
 }
 
-.navigation-link:focus {
-  outline-color: #AF4FFF;
+.navigation-link:focus-visible {
+  outline: 2px solid #AF4FFF;
 }
 
 .navigation-icon {
   padding-right: 12px;
 }
 
-.log-in {
-  padding-right: 144px;
+.navigation-item-basket {
+  position: relative;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.quantity {
+  Font-family: "rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 21px;
+  width: 21px;
+  height: 21px;
+  position: absolute;
+  top: 5px;
+  left: -15.5px;
+  background-color: #FFFFFF;
+  border-radius: 50%;
 }
 
 .nav-product-categories {
+  position: relative;
   display: flex;
   align-items: center;
   height: 50px;
   outline: #AF4FFF;
 }
 
-.nav-product-categories:focus {
+.nav-product-categories:focus-visible {
   border-color: #AF4FFF;
   outline: 2px solid #AF4FFF;
 }
@@ -295,6 +331,7 @@ button {
 .popover-text {
   width: 236px;
   height: 20px;
+  text-transform: uppercase;
 }
 
 .button-hide-categories {
@@ -327,15 +364,17 @@ button {
 
 .open-product-categories {
   position: absolute;
-  top: 220px;
-  left: 148px;
+  top: 65px;
+  left: -60px;
   display: flex;
   background-color: #FFE17F;
   width: 1040px;
   padding-left: 60px;
   padding-right: 60px;
-  display: ;
-
+  padding-bottom: 27px;
+  margin: 0 auto;
+  display: none;
+  z-index: 5;
 }
 
 .nav-catalog-list {
@@ -374,7 +413,7 @@ button {
   display: flex;
   justify-content: space-between;
   width: 480px;
-  margin-left: 240px;
+  margin-left: auto;
 
 }
 
@@ -393,6 +432,311 @@ button {
 
 }
 
-.nav-info-text:focus {
-  outline-color: #AF4FFF;
+.nav-info-text:focus-visible {
+  outline: 2px solid #AF4FFF;
+}
+
+.slider-block {
+  width: 1030px;
+  height: 560px;
+  padding-left: 60px;
+  padding-right: 70px;
+  margin-bottom: 70px;
+  z-index: 20;
+}
+.slider-section-one {
+  position: relative;   /* Включить слайдер 1 */
+  display: ;
+}
+
+.slider-section-two {
+  position: relative;   /* Включить слайдер 2 */
+  display: none;
+}
+
+.slider-section-three {
+  position: relative;   /* Включить слайдер 3 */
+  display: none;
+}
+
+.slider-image {
+  position: absolute;
+  top: -16px;
+  left: -60px;
+}
+
+.slider-button {
+  width: 20px;
+  height: 60px;
+  color: #000000;
+  background-color: #FFFFFF;
+  border: none;
+  cursor: pointer;
+  background-image: url(../images/svg-icon/icon-slider-arrow.svg);
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.slider-button:hover {
+  opacity: 0.6;
+}
+
+.slider-button:active {
+  opacity: 0.3;
+}
+
+.slider-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.slider-button:disabled {
+  opacity: 0.10;
+}
+
+.slider-prev {
+  position: absolute;
+  top: 200px;
+  left: -30px;
+}
+
+.slider-next {
+  position: absolute;
+  top: 200px;
+  left: 480px;
+  transform: rotate(180deg);
+}
+
+.slider-pagination {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  margin-left: auto;
+  padding: 0;
+  list-style-type: none;
+}
+
+.slider-pagination-item {
+  margin: 10px;
+}
+
+.slider-pagination-button {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  background-color: #FFFFFF;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-pagination-button:hover {
+  opacity: 0.6;
+}
+
+.slider-pagination-button:active {
+  opacity: 0.3;
+}
+
+.slider-pagination-button:focus-visible {
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
+}
+
+.slider-pagination-button:disabled {
+  opacity: 0.10;
+}
+
+.slider-pagination-button-current {
+  width: 12px;
+  height: 12px;
+  margin: 0;
+  padding: 0;
+  background-color: #000000;
+  border: 2px solid #000000;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.slider-info {
+  position: absolute;
+  width: 560px;
+  height: 401px;
+  top: 110px;
+  left: 540px;
+  display: flex;
+  flex-direction: column;
+}
+
+.slider-number {
+  font-family: "rubik";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 180px ;
+  line-height: 30px ;
+  color: #FFFFFF ;
+  width: 250px;
+  height: 135px;
+  position: absolute;
+  top: 70px;
+  left: 835px;
+}
+
+.slider-title {
+  font-family: "raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 45px;
+  line-height: 50px;
+  margin: 0;
+  margin-bottom: 29px;
+  padding: 0;
+}
+
+.slider-description {
+  font-family: "rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 51px;
+  padding: 0;
+}
+
+.slider-description-characteristics {
+  font-size: 16px;
+}
+
+.detail-slider {
+  width: 210px;
+  height: 20px;
+  font-family: "raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  letter-spacing: 4px;
+  line-height: 21px;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: #000000;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.block-1 {
+  display: flex;
+  align-items: center;
+  padding-bottom: 3px;
+  margin-bottom: 49px;
+}
+
+.slider-characteristics-list {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  margin-bottom: 38px;
+}
+
+.slider-characteristics-item {
+  margin-right: 20px;
+}
+
+.slider-characteristics-item-three {
+  margin-right: 40px;
+}
+
+.slider-characteristics-title {
+  font-family: "rubik";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 30px;
+  margin: 0;
+  margin-bottom: 12px;
+}
+
+.main-container {
+  width: 1160px;
+  margin-left: 140px;
+  margin-right: 140px;
+  margin-top: 495px;
+}
+
+.category-catalog-list {
+  margin-bottom: 70px;
+}
+
+.category-list {
+  display: grid;
+  grid-gap: 40px;
+  grid-template-columns: 160px 160px 160px 160px 160px 160px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+}
+
+.category-list h3{
+  margin: 0;
+  font-family: "raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 24px;
+  letter-spacing: -0.3px;
+  padding-top: ;
+}
+
+.catogory-link-item {
+  cursor: pointer;
+  width: 160px;
+}
+
+.category-list-item {
+  width: 160px;
+  height: 253px;
+}
+
+.category-item {
+  width: 160px;
+  height: 160px;
+  background-color: #FFE17F;
+  margin-bottom: 32px;
+}
+
+.category-virtual-reality {
+  padding-left: 32px;
+  padding-top: 53px;
+}
+
+.category-monopods {
+  padding-left: 37px;
+  padding-top: 43px;
+}
+
+.category-action-cameras {
+  padding-left: 44px;
+  padding-top: 36px;
+}
+
+.category-fitness-bracelets {
+  padding-left: 26px;
+  padding-top: 47px;
+}
+
+.category-smart-watch {
+  padding-left: 52px;
+  padding-top: 31px;
+}
+
+.category-quadcopters {
+  padding-left: 14px;
+  padding-top: 45px;
 }
