@@ -8,7 +8,7 @@
 <body>
   <div class="wrapper catalog-wrapper">
     <header class="header">
-      <nav class="navigation">
+      <nav class="navigation navigation-catalog">
         <a class="logo-link" href="#">
           <svg width="145" height="37" viewBox="0 0 145 37" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
           <path d="M27.2188.38892V35.6889h-7.6053v-2.4c-1.7011 1.9-4.1028 3.1-7.5051 3.1-6.6046 0-12.1084-5.8-12.1084-13.3 0-7.5 5.5038-13.29998 12.1084-13.29998 3.4023 0 5.904 1.19998 7.5051 3.09998V.38892h7.6053ZM19.6135 23.0889c0-3.8-2.5017-6.2-6.0041-6.2s-6.00416 2.4-6.00416 6.2c0 3.8 2.50176 6.2 6.00416 6.2 3.5024-.1 6.0041-2.4 6.0041-6.2ZM43.7298 29.5888c2.1015 0 3.8027-.8 4.8034-1.9l6.1042 3.5c-2.5018 3.4-6.2043 5.2-11.0076 5.2-8.606 0-14.0097-5.8-14.0097-13.3 0-7.5 5.4037-13.29998 13.4093-13.29998 7.4051 0 12.8088 5.69998 12.8088 13.29998 0 1.1-.1001 2.1-.3002 3H37.6256c1.0007 2.6 3.3023 3.5 6.1042 3.5Zm4.6032-9.1c-.8005-2.9-3.1021-4-5.4037-4-2.902 0-4.8033 1.4-5.5038 4H48.333ZM82.1563 10.489l-9.3064 25.2h-8.606l-9.3064-25.2h8.4058l5.3037 16 5.3036-16h8.2057ZM83.458 10.489h7.6053v25.2H83.458v-25.2ZM93.665 23.0888c0-7.5 5.704-13.29998 13.409-13.29998 4.904 0 9.207 2.59998 11.408 6.49998l-6.604 3.8c-.901-1.8-2.702-2.8-4.904-2.8-3.302 0-5.704 2.4-5.704 5.8 0 3.5 2.402 5.8 5.704 5.8 2.202 0 4.103-1.1 4.904-2.8l6.604 3.8c-2.101 3.9-6.404 6.5-11.408 6.5-7.705 0-13.409-5.8-13.409-13.3ZM132.892 29.5888c2.101 0 3.803-.8 4.803-1.9l6.104 3.5c-2.501 3.4-6.204 5.2-11.007 5.2-8.606 0-14.01-5.8-14.01-13.3 0-7.5 5.504-13.29998 13.409-13.29998 7.406 0 12.809 5.69998 12.809 13.29998 0 1.1-.1 2.1-.3 3h-17.912c1 2.6 3.302 3.5 6.104 3.5Zm4.703-9.1c-.8-2.9-3.102-4-5.404-4-2.902 0-4.803 1.4-5.503 4h10.907Z" fill="#000"/>
@@ -142,6 +142,34 @@
 
           <form class="catalog-filter" action="https://echo.htmlacademy.ru/" method="get">
             <h2 class="catalog-titles catalog-titles-filter">Фильтр:</h2>
+
+            <fieldset class="catalog-filter-group range-group">
+              <h2 class="catalog-filter-title filter-list-titles">Стоимость</h2>
+
+              <div class="range">
+                <div class="range-scale">
+                  <div class="range-bar" style="left: 0px; width: 136px">
+                    <button class="range-toggle toggle-min">
+                      <span class="visually-hidden">Изменить минимальную цену.</span>
+                    </button>
+                    <button class="range-toggle toggle-max">
+                      <span class="visually-hidden">Изменить максимальную цену.</span>
+                    </button>
+                  </div>
+                </div>
+
+                <div class="range-wrapper-inputs">
+                  <label class="catalog-filter-label"> от
+                    <input class="range-input" type="number" min="0" max="5000" value="0" name="min-price">
+                  </label>
+                  <label class="catalog-filter-label"> до
+                    <input class="range-input" type="number" min="0" max="5000" value="5000" name="max-price">
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+
+
             <fieldset class="catalog-filter-group">
               <h3 class="filter-list-titles">Цвет</h3>
               <ul class="catalog-filter-list">
@@ -201,7 +229,7 @@
                 </li>
               </ul>
             </fieldset>
-            <button class="catalog-filter-button" type="submit">Показать</button>
+            <button class="page-button catalog-filter-button" type="submit">Показать</button>
           </form>
 
           <!-- Сортировка -->
@@ -213,14 +241,28 @@
                 <option value="cheap">От дешевого</option>
                 <option value="expensive">От дорогого</option>
               </select>
-              <div class="sorting-buttons">
-                <a class="sorting-button sorting-button-top" href="#">
-                  <span class="visually-hidden">Направление сортировки вверх</span>
-                </a>
-                <a class="sorting-button sorting-button-bottom" href="#">
-                  <span class="visually-hidden">Направление сортировки вниз</span>
-                </a>
-              </div>
+
+              <fieldset class="sorting-direction" id="sorting-direction">
+                <legend class="visually-hidden">Направление сортировки:</legend>
+                <ul class="sorting-direction-list">
+                  <li class="sorting-direction-item">
+                    <label class="visually-hidden">вверх</label>
+                    <input class="sorting-direction-input visually-hidden" type="radio"
+                    id="up" name="sorting-direction" value="up" checked hidden>
+                    <button class="sorting-direction-button sorting-direction-up" type="button">
+                      <svg class="sorting-button-image" width="12" height="10" viewBox="0 0 12 10" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" /></svg>
+                    </button>
+                  </li>
+                  <li class="sorting-direction-item">
+                    <label class="visually-hidden">вниз</label>
+                    <input class="sorting-direction-input visually-hidden" type="radio"
+                    id="up" name="sorting-direction" value="down" checked hidden>
+                    <button class="sorting-direction-button sorting-direction-down" type="button">
+                      <svg class="sorting-button-image" width="12" height="10" viewBox="0 0 12 10" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" /></svg>
+                    </button>
+                  </li>
+                </ul>
+              </fieldset>
             </div>
 
             <!-- Список товаров -->
@@ -270,12 +312,12 @@
 
             <ul class="pagination">
               <li class="pagination-item pagination-item-back">
-                <a class="pagination-link-prev pagination-prev pagination-disabled">
-                  <h2 class="catalog-titles">Назад</h2>
+                <a class="pagination-link-prev pagination-prev pagination-disabled" href="#">
+                  <h2 class="catalog-titles pagination-catalog-titles">Назад</h2>
                 </a>
               </li>
               <li class="pagination-item">
-                <a class="pagination-link pagination-current">1</a>
+                <a class="pagination-link pagination-current" href="#">1</a>
               </li>
               <li class="pagination-item">
                 <a class="pagination-link" href="#">2</a>
@@ -290,8 +332,8 @@
                 <a class="pagination-link" href="#">15</a>
               </li>
               <li class="pagination-item pagination-item-next">
-                <a class="pagination-link-prev pagination-prev pagination-disabled">
-                  <h2 class="catalog-titles">Вперёд</h2>
+                <a class="pagination-link-prev pagination-next pagination-disabled" href="#">
+                  <h2 class="catalog-titles pagination-catalog-titles">Вперёд</h2>
                 </a>
               </li>
             </ul>
