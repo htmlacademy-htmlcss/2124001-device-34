@@ -351,12 +351,12 @@ button {
   align-items: center;
   text-decoration: none;
   border: none;
-  outline: none;
-}
 
-.popover-focus:focus-visible {
-  outline: red;
 }
+/* проверить фокус */
+/* .popover-focus:focus-visible {
+  outline: red;
+}*/
 
 .popover-text {
   width: 236px;
@@ -405,7 +405,7 @@ button {
   padding-bottom: 27px;
   margin: 0 auto;
   display: none;
-  z-index: 5;
+  z-index: 3;
 }
 
 .nav-catalog-list {
@@ -2173,8 +2173,6 @@ button {
   background: rgba(240, 240, 240, 0.8);
 }
 
-
-
 .pagination-show-more {
   Font-family: "raleway";
   font-style: normal;
@@ -2225,9 +2223,29 @@ button {
   height: 40px;
 }
 
-.pagination-catalog-titles {
-  padding-left: 25px;
-  padding-right: 25px;
+.pagination-prev, .pagination-next {
+  Font-family: "raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px ;
+  line-height: 19px ;
+  margin: 0;
+  padding: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+}
+
+.pagination-prev:hover {
+  opacity: 1;
+}
+
+.pagination-prev:active {
+  opacity: 0.1;
+}
+
+.pagination-prev:focus-visible {
+  outline: 2px solid #AF4FFF;
+  opacity: 1;
 }
 
 .pagination-link {
@@ -2263,8 +2281,15 @@ button {
 
 .pagination-link-prev {
   text-decoration: none;
-  width: 122px;
-  height: 69px;
+  padding: 25px 25px 25px 25px;
+}
+
+.pagination-item-back, .pagination-item-next {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 71px;
+  width: 128px;
 }
 
 .pagination-item-back, .pagination-item-next {
@@ -2282,14 +2307,6 @@ button {
 
 .pagination-item-back:active, .pagination-item-next:active {
   background-color: #DCDCDC;
-}
-
-.pagination-catalog-titles:active {
-  opacity: 0.3;
-}
-
-.pagination-item-back:focus, .pagination-item-next:focus {
-
 }
 
 .pagination-link-prev:focus-visible {
