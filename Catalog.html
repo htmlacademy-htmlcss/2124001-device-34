@@ -16,11 +16,15 @@
         </a>
         <div class="first-line">
         <form class="search-form" action="https://echo.htmlacademy.ru/" method="post">
-          <label for="search-input"><span class="visually-hidden">Текст поиска</span></label>
-          <input class="field field-icon-dandruff"  placeholder="Поиск по сайту" type="search" name="search-input" id="search-input" required>
-          <button class="button-search-form" type="submit">
-            <span class="button-search">Найти</span>
-          </button>
+          <div class="search-container">
+            <label for="search-input"><span class="visually-hidden">Текст поиска</span></label>
+            <input class="field field-icon-dandruff"  placeholder="Поиск по сайту" type="search" name="search-input" id="search-input" required>
+          </div>
+          <div class="button-search-container">
+            <button class="button-search-form" type="submit">
+              <span class="button-search">Найти</span>
+            </button>
+          </div>
         </form>
 
         <ul class="navigation-list navigation-user">
@@ -41,7 +45,7 @@
             </a>
           </li>
           <li class="navigation-item navigation-item-basket">
-            <a class="navigation-link navigation-link-user" href="#">
+            <a class="navigation-link navigation-link-user" href="https://www.youtube.com/watch?v=G1IbRujko-A&ab_channel=10Hours">
               <svg class="navigation-icon navigation-icon-basket" width="16" height="14" viewBox="0 0 16 14" xmlns="http://www.w3.org/2000/svg"><path d="m15.3 5-3.5.2L8.6.3C8.5.1 8.2 0 8 0c-.2 0-.5.1-.6.3L4.2 5.2H.7c-.4 0-.7.3-.7.7v.2l1.9 6.8c.2.7.7 1.1 1.4 1.1h9.4c.7 0 1.2-.4 1.4-1.1L16 6v-.2c0-.4-.3-.8-.7-.8ZM8 1.9l2.2 3.2H5.9L8 1.9Z" /></svg>
               <span class="quantity">2</span>
               <span>Корзина</span>
@@ -51,10 +55,12 @@
           </div>
 
           <div class="nav-product-categories">
-            <h2 class="popover-text">Каталог товаров</h2>
-            <button class="button-uncover-categories" type="button">
-              <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z"/></svg>
-            </button>
+            <a class="popover-focus" href="https://www.youtube.com/watch?v=hG4CA33h2q4&ab_channel=ZOLDRTV">
+              <h2 class="popover-text">Каталог товаров</h2>
+              <button class="button-uncover-categories" type="button">
+                <svg width="16" height="16" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg"><path d="M16 7H9V0H7v7H0v2h7v7h2V9h7V7Z"/></svg>
+              </button>
+            </a>
 
             <div class="open-product-categories">
               <button class="button-hide-categories" type="button">
@@ -176,35 +182,35 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="black" checked>
-                    <span class="fake"></span>
+                    <span class="fake" tabindex="0"></span>
                     Черный
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="white" checked>
-                    <span class="fake"></span>
+                    <span class="fake" tabindex="0"></span>
                     Белый
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="blue" >
-                    <span class="fake"></span>
+                    <span class="fake" tabindex="0"></span>
                     Синий
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="red" >
-                    <span class="fake"></span>
+                    <span class="fake" tabindex="0"></span>
                     Красный
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-input" type="checkbox" name="pink" >
-                    <span class="fake"></span>
+                    <span class="fake" tabindex="0"></span>
                     Розовый
                   </label>
                 </li>
@@ -216,14 +222,14 @@
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-input-radio" type="radio" name="bluetooth-group" value="available" checked>
-                    <span class="fake fake-radio"></span>
+                    <span class="fake fake-radio" tabindex="0"></span>
                     Есть
                   </label>
                 </li>
                 <li class="catalog-filter-item">
                   <label class="control">
                     <input class="control-input-radio" type="radio" name="bluetooth-group" value="not-available">
-                    <span class="fake fake-radio"></span>
+                    <span class="fake fake-radio" tabindex="0"></span>
                     Нет
                   </label>
                 </li>
@@ -270,7 +276,9 @@
             <ul class="product-list">
               <li class="product-card">
                 <a class="product-card-link" href="product.html">
-                  <img class="product-card-image" src="images/png/product-image-1.png" width="360" height="380" alt="">
+                  <div class="opop">
+                    <img class="product-card-image" src="images/png/product-image-1.png" width="360" height="380" alt="">
+                  </div>
                   <div class="product-flex">
                     <h3 class="product-card-title filter-list-titles">Любительская<br>селфи-палка</h3>
                     <span class="product-card-price">500 ₽</span>
