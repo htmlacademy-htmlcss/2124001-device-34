@@ -50,9 +50,35 @@
               <span class="quantity">2</span>
               <span>Корзина</span>
             </a>
+            <div class="popover popover-cart">
+              <svg class="popover-vector" width="14" height="7" viewBox="0 0 14 7" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14 6.16675H0l7-6 7 6Z" fill="#000"/></svg>
+              <div class="popover-content">
+                <ul class="cart-items-list">
+                  <a class="cart-item" href="#">
+                    <img class="cart-image" src="./images/png/product-image-1.png" width="39" height="43" alt="Селфи-палка.">
+                    <p class="cart-item-title">Любительская селфи-палка</p>
+                    <button class="close-item" type="button"></button>
+                  </a>
+                  <a class="cart-item" href="#">
+                    <img class="cart-image" src="./images/png/product-image-2.png" width="39" height="43" alt="Селфи-палка.">
+                    <p class="cart-item-title">Профессиональная селфи-палка</p>
+                    <button class="close-item" type="button"></button>
+                  </a>
+                </ul>
+                <div class="result">
+                  <p class="cart-item-products">Товаров:2</p>
+                  <p class="cart-item-sum">Сумма: 2000₽</p>
+                </div>
+                <div class="basket-link">
+                  <a class="open-basket-link" href="#">
+                    <span class="title-basket-link">Открыть&nbsp;корзину</span>
+                  </a>
+                </div>
+              </div>
+            </div>
           </li>
-          </ul>
-          </div>
+        </ul>
+      </div>
 
           <div class="nav-product-categories">
             <a class="popover-focus" href="https://www.youtube.com/watch?v=hG4CA33h2q4&ab_channel=ZOLDRTV">
@@ -165,12 +191,16 @@
                 </div>
 
                 <div class="range-wrapper-inputs">
-                  <label class="catalog-filter-label"> от
-                    <input class="range-input" type="number" min="0" max="5000" value="0" name="min-price">
-                  </label>
-                  <label class="catalog-filter-label"> до
-                    <input class="range-input" type="number" min="0" max="5000" value="5000" name="max-price">
-                  </label>
+                  <div class="range-numbers">
+                    <label class="catalog-filter-label"> от
+                      <input class="range-input" type="number" min="0" max="5000" value="0" name="min-price">
+                    </label>
+                  </div>
+                  <div class="range-numbers">
+                    <label class="catalog-filter-label"> до
+                      <input class="range-input" type="number" min="0" max="5000" value="5000" name="max-price">
+                    </label>
+                  </div>
                 </div>
               </div>
             </fieldset>
@@ -267,7 +297,7 @@
                   <li class="sorting-direction-item">
                     <label class="visually-hidden">вниз</label>
                     <input class="sorting-direction-input visually-hidden" type="radio"
-                    id="up" name="sorting-direction" value="down" checked hidden>
+                    id="down" name="sorting-direction" value="down" checked hidden>
                     <button class="sorting-direction-button sorting-direction-down" type="button">
                       <svg class="sorting-button-image" width="12" height="10" viewBox="0 0 12 10" xmlns="http://www.w3.org/2000/svg"><path d="m6 0 5.5 10H.5" /></svg>
                     </button>
@@ -390,7 +420,7 @@
           </ul>
           <a class="social-telephone" href="tel:+78128121212">Тел.: +7 (812) 812-12-12</a>
           <div class="footer-social">
-            <img class="frame" src="./images/png/frame.png" width="80" height="7">
+            <img class="frame" src="./images/png/frame.png" width="80" height="7" alt="">
             <ul class="social-list">
               <li class="item-social-list">
                 <a class="item-social-link" href="#">
@@ -415,6 +445,61 @@
         </div>
       </section>
     </footer>
+    <div class="modal-container">
+      <div class="modal modal-delivery">
+        <button class="modal-close-button">
+          <span class="visually-hidden">Закрыть</span>
+        </button>
+        <section class="modal-content">
+          <h2 class="modal-title">Доставка под заказ</h2>
+        </section>
+
+        <form class="modal-forms" action="https://echo.htmlacademy.ru/" method="post">
+          <div class="field-group">
+            <label class="modal-form-title" for="info-form-name">Ваше имя:</label>
+            <input class="modal-form-field name-field" type="text" id="name" name="name" placeholder="Введите имя">
+            <p class="reminder right-name">Добавьте имя</p>
+          </div>
+          <div class="field-group">
+            <label class="modal-form-title" for="info-form-email">Ваш e-mail:</label>
+            <input class="modal-form-field" type="email" id="modal-input-email" name="email" placeholder="Ваш e-mail">
+            <p class="reminder wrong-email">Забавный у вас адрес</p>
+          </div>
+          <div class="field-group field-group-clarification">
+            <label class="modal-form-title" for="info-form-clarification">Что нужно привезти:</label>
+            <input class="modal-form-field clarification-field" type="text" id="clarification" name="clarification" placeholder="В свободной форме">
+          </div>
+
+          <div class="modal-amount">
+
+            <label class="modal-form-title modal-text-amount">Количество:</label>
+            <div class="modal-tooltip">
+              <button class="modal-tooltip-toggle" type="button" aria-labelledby="tooltip-label">
+                <svg class="modal-tooltip-icon" width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="13" cy="13" r="13" fill="#FFE17F"/><path d="M14 7h-2v2h2V7ZM14 11h-2v8h2v-8Z" fill="#000"/></svg>
+              </button>
+              <span class="modal-tooltip-text" role="tooltip" id="tooltip-label">
+                Постараемся найти, сколько нужно. Привезём сколько получится по требованиям<br>к провозу багажа.
+              </span>
+            </div>
+
+
+          <div class="container-amount-products">
+            <button class="minus">
+              <svg class="minus-icon" width="13" height="1" viewBox="0 0 13 1" xmlns="http://www.w3.org/2000/svg"><path  d="M0 0v1h13V0H0Z"/></svg>
+              <span class="visually-hidden">-</span>
+            </button>
+            <input class="form-number" value="1" type="text">
+            <button class="plus">
+              <svg class="plus-icon" width="13" height="13" viewBox="0 0 13 13" xmlns="http://www.w3.org/2000/svg"><path d="M13 6H7V0H6v6H0v1h6v6h1V7h6V6Z"/></svg>
+              <span class="visually-hidden">+</span>
+            </button>
+          </div>
+        </div>
+        <button class="page-button modal-button" type="submit">Отправить</button>
+        </form>
+      </div>
+    </div>
+
   </div>
 </body>
 </html>
