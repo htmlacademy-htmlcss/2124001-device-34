@@ -2209,12 +2209,14 @@ button {
 
 .product-card {
   display: block;
+  z-index: 5;
 }
 
 .product-card-link {
   display: block;
   text-decoration: none;
   color: #000000;
+  position: relative;
 }
 
 .product-card-link:hover {
@@ -2235,30 +2237,6 @@ button {
   margin-bottom: 32px;
 }
 
-.opop {
-  position: relative;
-}
-
-
-
-.opop:hover::before {
-  Font-family: "raleway";
-  font-style: normal;
-  font-weight: 800;
-  font-size: 18px;
-  line-height: 21.33px;
-  letter-spacing: 0.2em;
-  display: block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: #000000;
-  background-color: rgba(240, 240, 240, 0.8);
-
-  content: "Подробнее";
-  padding: 180px 110px 180px 110px;
-}
-
 .product-card-title {
   width: 232px;
   margin: 0;
@@ -2276,6 +2254,50 @@ button {
 .product-flex {
   display: flex;
   justify-content: space-between;
+}
+
+.product-card-condition {
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  Font-family: "raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 12.13px;
+  letter-spacing: 0.2em;
+  color: #000000;
+  background: rgba(240, 240, 240, 0.8);
+  text-transform: uppercase;
+  z-index: -3;
+  padding: 170px 70px 170px 70px;
+  width: 220px;
+  height: 40px;
+  text-align: center;
+}
+
+.product-card-condition:after {
+  position: absolute;
+  top: 45.2%;
+  left: 20%;
+  content: "";
+  height: 8px;
+  width: 220px;
+  right: 8px;
+  bottom: 16px;
+  background-color: #FFE17F;
+  z-index: -1;
+}
+
+.product-card-link:hover
+.product-card-condition {
+  z-index: 0;
+}
+
+.product-card-link:active
+.product-card-condition:after {
+  z-index: -1;
+  background-color: #FFC700;
 }
 
 .pagination-show-more {
