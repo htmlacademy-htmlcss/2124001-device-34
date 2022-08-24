@@ -1787,7 +1787,7 @@ button {
 }
 
 .breadcrumbs-item {
-  display: block;
+
   Font-family: "rubik";
   font-style: normal;
   font-weight: 400;
@@ -1806,22 +1806,9 @@ button {
 }
 
 .breadcrumbs-link {
-  display: block;
+
   text-decoration: none;
   color: #000000;
-}
-
-.breadcrumbs-link:hover {
-  opacity: 0.6;
-}
-
-.breadcrumbs-link:active {
-  opacity: 0.3;
-}
-
-.breadcrumbs-link:focus-visible {
-  border: #AF4FFF;
-  outline-offset: 2px;
 }
 
 .catalog-products {
