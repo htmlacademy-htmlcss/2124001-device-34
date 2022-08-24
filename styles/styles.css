@@ -125,7 +125,7 @@ button {
 
 .logo-link {
   position: absolute;
-  top: 20px;
+  top: 18px;
 }
 
 .logo-link:hover {
@@ -169,7 +169,6 @@ button {
   border-bottom-left-radius: 50px;
   border-top-left-radius: 50px;
   border: 2px solid #000000;
-  border-right: 0;
   grid-column-start: 1;
   grid-column-end: 2;
   cursor: pointer;
@@ -180,7 +179,7 @@ button {
 .field-icon-dandruff {
   background-image: url(../images/svg-icon/icon-form-dandruff.svg);
   background-repeat: no-repeat;
-  background-position: left 16px center;
+  background-position: left 14px center;
   width: 359px;
   height: 40px;
   margin-left: auto;
@@ -200,9 +199,10 @@ button {
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
   border: 2px solid #000000;
+  border-left: 0;
   grid-column-start: 2;
   grid-column-end: 3;
-  width: 160px;
+  width: 158px;
   height: 40px;
   cursor: pointer;
   outline: none;
@@ -280,7 +280,7 @@ button {
 }
 
 .navigation-icon {
-  padding-right: 12px;
+  padding-right: 8px;
 }
 
 .navigation-item-basket {
@@ -288,6 +288,7 @@ button {
   display: flex;
   align-items: center;
   text-align: center;
+  margin-left: 33px;
 }
 
 .quantity {
@@ -365,6 +366,7 @@ button {
   height: 20px;
   text-transform: uppercase;
   margin-right: 7px;
+  letter-spacing: 0.2em;
 }
 
 .button-hide-categories {
@@ -442,14 +444,19 @@ button {
   color: #000000;
 }
 
+.nav-info-link-delivery {
+  margin-right: -4px;
+}
+
 .nav-info-menu {
   display: flex;
   justify-content: space-between;
   margin-left: auto;
+  margin-right: -4px;
 }
 
 .nav-info-link {
-  margin-left: 45px;
+  margin-left: 48px;
   text-decoration: none;
 }
 
@@ -459,7 +466,7 @@ button {
   font-weight: 800;
   font-size: 18px ;
   line-height: 21.13px;
-  letter-spacing: 00.2em;
+  letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
 }
@@ -483,9 +490,10 @@ button {
   height: 560px;
   padding-left: 60px;
   padding-right: 70px;
-  margin-bottom: 70px;
+  margin-bottom: 60px;
   z-index: 20;
 }
+
 .slider-section-one {
   position: relative;   /* Включить слайдер 1 */
   display: ;
@@ -538,13 +546,13 @@ button {
 
 .slider-prev {
   position: absolute;
-  top: 200px;
+  top: 195px;
   left: -30px;
 }
 
 .slider-next {
   position: absolute;
-  top: 200px;
+  top: 195px;
   left: 480px;
   transform: rotate(180deg);
 }
@@ -553,8 +561,7 @@ button {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  margin: 0;
-  margin-left: auto;
+  margin: -6px -10px 0 auto;
   padding: 0;
   list-style-type: none;
 }
@@ -606,7 +613,7 @@ button {
   position: absolute;
   width: 560px;
   height: 401px;
-  top: 110px;
+  top: 106px;
   left: 540px;
   display: flex;
   flex-direction: column;
@@ -622,19 +629,20 @@ button {
   width: 250px;
   height: 135px;
   position: absolute;
-  top: 70px;
-  left: 835px;
+  top: 67px;
+  left: 839.5px;
 }
 
 .title {
   font-family: "raleway";
   font-style: normal;
   font-weight: 800;
-  font-size: 45px;
+  font-size: 50px;
   line-height: 50px;
   margin: 0;
   margin-bottom: 29px;
   padding: 0;
+  letter-spacing: -0.01px;
 }
 
 .description {
@@ -654,10 +662,11 @@ button {
   font-weight: 400;
   font-size: 16px;
   line-height: 30px;
+  margin: 0;
 }
 
 .detail-slider {
-  width: 210px;
+  width: 223px;
   height: 20px;
   font-family: "raleway";
   font-style: normal;
@@ -666,6 +675,7 @@ button {
   letter-spacing: 4px;
   line-height: 21px;
   margin: 0;
+
   padding: 0;
   text-decoration: none;
   color: #000000;
@@ -677,7 +687,7 @@ button {
   display: flex;
   align-items: center;
   padding-bottom: 3px;
-  margin-bottom: 49px;
+  margin-bottom: 45px;
 }
 
 .slider-characteristics-list {
@@ -691,7 +701,7 @@ button {
 }
 
 .slider-characteristics-item {
-  margin-right: 20px;
+  margin-right: 21px;
 }
 
 .slider-characteristics-item-three {
@@ -711,7 +721,7 @@ button {
 .main-container {
   width: 1440px;
   margin: 0;
-  margin-top: 495px;
+  margin-top: 479px;
 }
 
 .category-catalog-list {
@@ -837,28 +847,18 @@ button {
   margin: 0 0 72px 0;
   padding: 64px 0 65px 0;
   list-style-type: none;
-  border-right: 7px solid #000000;
+  border-right: 8px solid #000000;
 }
 
 .info-list-item {
   width: 280px;
 }
 
-
-
 .info-list-item:not(:last-child) {
   margin-bottom: 35px;
 }
 
 .info-item-button {
-  display: block;
-  position: relative;
-  width: 160px;
-  height: 40px;
-  padding: 10px 0;
-  border: none;
-  text-decoration: none;
-  color: #000000;
   font-family: "raleway";
   font-style: normal;
   font-weight: 800;
@@ -867,16 +867,22 @@ button {
   text-align: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
+  display: block;
+  position: relative;
+  width: 165px;
+  height: 40px;
+  padding: 10px 0;
+  border: none;
+  text-decoration: none;
+  color: #000000;
   z-index: 2;
 }
 
 .info-item-button:after {
   position: absolute;
-
   content: "";
   height: 8px;
   width: 100%;
-  right: 0px;
   bottom: 16px;
   z-index: -1;
 }
@@ -926,7 +932,7 @@ button {
 }
 
 .info-title {
-  margin-bottom: 34px;
+  margin: 1px 0 34px 0;
 }
 
 .category-info-description {
@@ -938,7 +944,7 @@ button {
   width: 136px;
   height: 164px;
   background-repeat: no-repeat;
-  margin-top: 77.5px;
+  margin: 77.5px 69px 0 0;
 }
 
 .info-image-two {
@@ -946,7 +952,7 @@ button {
   width: 171px;
   height: 195px;
   background-repeat: no-repeat;
-  margin-top: 77.5px;
+  margin: 77.5px 69px 0 0;
 }
 
 .info-image-three {
@@ -954,7 +960,7 @@ button {
   width: 156px;
   height: 188px;
   background-repeat: no-repeat;
-  margin-top: 77.5px;
+  margin: 77.5px 69px 0 0;
 }
 
 .delivery-block {
@@ -998,11 +1004,11 @@ button {
   line-height: 23px;
   letter-spacing: 2px;
   text-transform: uppercase;
+  letter-spacing: 0.2em;
   width: 910px;
   height: 21px;
   border: none;
-  margin: 0;
-  margin-top: 40px;
+  margin: 41px 0 0 2px;
   padding: 0;
   text-align: center;
   color: #000000;
@@ -1068,7 +1074,8 @@ button {
   font-weight: 800;
   font-size: 50px;
   line-height: 50px;
-  margin-bottom: 48px;
+  margin: 0 0 48px 0;
+  letter-spacing: 0.2px;
 }
 
 .about-description, .contacts-description, .address-description, .working-time-description {
@@ -1144,11 +1151,18 @@ button {
   margin-right: 26px;
 }
 
+.about-link {
+  margin-left: 2px;
+  width: 268px;
+}
+
+.contacts-link {
+  margin-left: 2px;
+  width: 260px;
+}
+
 .about-link, .contacts-link {
   display: inline-block;
-  width: 259px;
-  position: relative;
-  padding: 10px 0;
   font-family: "raleway";
   font-style: normal;
   font-weight: 800;
@@ -1158,6 +1172,8 @@ button {
   letter-spacing: 0.2em;
   text-transform: uppercase;
   text-decoration: none;
+  position: relative;
+  padding: 10px 0;
   color: #000000;
 }
 
@@ -1224,7 +1240,7 @@ button {
   font-size: 50px;
   line-height: 50px;
   padding: 0;
-  margin: 64px 0 0 0;
+  margin: 64px 0 0 7px;
 }
 
 .subscription-description ,.subscription-clarify {
@@ -1239,7 +1255,7 @@ button {
 
 .subscription-description {
   width: 560px;
-  margin-top: 74px;
+  margin: 74px -6px 0 0px;
 }
 
 .subscription-form {
@@ -1289,20 +1305,21 @@ button {
 }
 
 .subscription-button {
-  width: 251px;
-  min-height: 57px;
-  border: 3px solid #C4C4C4;
   font-family: "raleway";
   font-style: normal;
   font-weight: 800;
   font-size: 18px;
   line-height: 21px;
+  width: 251px;
+  min-height: 57px;
+  border: 3px solid #C4C4C4;
   align-items: center;
   justify-content: center;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   color: #000000;
   cursor: pointer;
+  padding: 0 0 1px 4px;
 }
 
 .subscription-button:focus-visible {
@@ -1325,11 +1342,15 @@ button {
   opacity: 0.3;
 }
 
+.subscription-clarify {
+  margin-right: 1px;
+}
+
 .subscription-clarify::before {
   position: absolute;
   left: 0;
   top: 90%;
-  left: 86%;
+  left: 86.1%;
   width: 16px;
   height: 16px;
   display: block;
@@ -1358,7 +1379,7 @@ button {
 
 .footer-logo-link {
   position: absolute;
-  top: 70px;
+  top: 61px;
 }
 
 .footer-logo-link:hover {
@@ -1380,6 +1401,7 @@ button {
   margin: 0;
   font-size: 16px;
   line-height: 20px;
+  margin-top: -15px;
 }
 
 .footer-list {
@@ -1388,14 +1410,16 @@ button {
   padding: 0;
   list-style: none;
   padding-bottom: 5px;
+  margin-top: -20px;
+  margin-left: -28px;
 }
 
 .footer-list-item {
-  margin-right: 35px;
+  margin-right: 32px;
 }
 
 .footer-list-item:not(:last-child) {
-  margin-right: 35px;
+  margin-right: 32px;
 }
 
 .footer-item-button {
@@ -1438,6 +1462,7 @@ button {
   font-weight: 400;
   font-size: 16px;
   line-height: 20px;
+  margin-top: -22px;
 }
 
 .social-telephone:hover {
@@ -1456,7 +1481,8 @@ button {
 
 .footer-social {
   position: absolute;
-  top: 220px;
+  top: 207px;
+  left: -2px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -1510,6 +1536,8 @@ button {
 .html-academy-link {
   fill: #FFC700;
   outline: none;
+  margin-right: -2px;
+  margin-top: 2px;
 }
 
 .html-academy-link:hover {
@@ -1524,6 +1552,11 @@ button {
 .html-academy-link:focus-visible {
   fill: #FFC700;
   border: 1px solid #AF4FFF;
+}
+
+.frame {
+  margin-right: -5px;
+  margin-left: 3px;
 }
 
 /* Вкл\Выкл Модальное окно */
