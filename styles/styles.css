@@ -85,12 +85,12 @@ button {
   outline: 2px solid #AF4FFF;
 }
 
-.body {
+body {
   display: flex;
   flex-direction: column;
-  margin: 0;
   min-height: 100%;
   min-width: 1400px;
+  margin: 0;
 }
 
 .wrapper {
@@ -110,6 +110,10 @@ button {
   margin-right: 140px;
 }
 
+.catalog-header {
+  margin-bottom: 1px;
+}
+
 .navigation {
   background-color: #FFE17F;
   width: 1040px;
@@ -120,12 +124,17 @@ button {
 }
 
 .navigation-catalog {
+  margin-top: 37px;
   padding-bottom: 22.61px;
 }
 
 .logo-link {
   position: absolute;
   top: 18px;
+}
+
+.logo-link-catalog {
+  top: 16px;
 }
 
 .logo-link:hover {
@@ -163,7 +172,7 @@ button {
   font-size: 16px ;
   line-height: 20px ;
   color: #000000;
-  max-width: 359px;
+  max-width: 358px;
   height: 40px;
   background-color: #FFE17F;
   border-bottom-left-radius: 50px;
@@ -174,6 +183,7 @@ button {
   cursor: pointer;
   outline: none;
   padding-right: 0;
+  border-right: 0;
 }
 
 .field-icon-dandruff {
@@ -199,11 +209,10 @@ button {
   border-bottom-right-radius: 50px;
   border-top-right-radius: 50px;
   border: 2px solid #000000;
-  border-left: 0;
   grid-column-start: 2;
   grid-column-end: 3;
-  width: 158px;
-  height: 40px;
+  width: 160px;
+  min-height: 40px;
   cursor: pointer;
   outline: none;
 }
@@ -261,6 +270,10 @@ button {
   margin-left: 26px;
 }
 
+.login {
+  opacity: 0.3;
+}
+
 .navigation-item-equalize {
   margin-left: auto;
 }
@@ -306,6 +319,11 @@ button {
   border-radius: 50%;
 }
 
+.quantity-catalog {
+  top: 8px;
+  left: -15.5px;
+}
+
 .nav-product-categories {
   position: relative;
   display: flex;
@@ -325,16 +343,17 @@ button {
   fill: rgba(0, 0, 0, 0.3);
   background-color: #FFE17F;
   border-radius: 50%;
-  border-color: rgba(0, 0, 0, 0.3);
+  border-color: rgba(0, 0, 1, 0.3);
   height: 50px;
   width: 50px;
   outline: none;
+  z-index: 100;
 }
 
 .button-uncover-categories:hover {
   background-color: #FFE17F;
   fill: #000000;
-  border-color: #000000;
+  border-color: #000001;
 }
 
 .button-uncover-categories:active {
@@ -455,9 +474,17 @@ button {
   margin-right: -4px;
 }
 
+.nav-info-menu-catalog {
+  margin-bottom: -1px;
+}
+
 .nav-info-link {
   margin-left: 48px;
   text-decoration: none;
+}
+
+.info-link-catalog {
+  margin-left: 44px;
 }
 
 .nav-info-text {
@@ -486,11 +513,12 @@ button {
 }
 
 .slider-block {
+  display: block;
   width: 1030px;
-  height: 560px;
+  min-height: 560px;
   padding-left: 60px;
   padding-right: 70px;
-  margin-bottom: 60px;
+  margin: -135px auto 54px auto;
   z-index: 20;
 }
 
@@ -633,7 +661,7 @@ button {
   left: 839.5px;
 }
 
-.title {
+.title , .slider-title {
   font-family: "raleway";
   font-style: normal;
   font-weight: 800;
@@ -645,7 +673,7 @@ button {
   letter-spacing: -0.01px;
 }
 
-.description {
+.description, .slider-description {
   font-family: "rubik";
   font-style: normal;
   font-weight: 400;
@@ -721,7 +749,6 @@ button {
 .main-container {
   width: 1440px;
   margin: 0;
-  margin-top: 479px;
 }
 
 .category-catalog-list {
@@ -814,11 +841,10 @@ button {
 }
 
 .block-info-list {
-  background-color: #F0F0F0;
-  width: 1440px;
-  min-height: 289px;
-  margin-bottom: 70px;
   position: relative;
+  background-color: #F0F0F0;
+  min-height: 289px;
+  margin: 0 auto 70px 0;
 }
 
 .container-info-list {
@@ -925,10 +951,7 @@ button {
   width: 479px;
   min-height: 174px;
   max-height: 246px;
-  margin: 0;
-  margin-right: 106px;
-  margin-left: 116px;
-  margin-top: 72.5px;
+  margin: 72.5px 106px 0 116px;
 }
 
 .info-title {
@@ -1113,8 +1136,8 @@ button {
 }
 
 .contacts-telephone:focus-visible {
-  border: 2px solid #AF4FFF;
-  outline: none;
+  outline: 2px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .about-list {
@@ -1186,7 +1209,7 @@ button {
 }
 
 .about-link:focus-visible, .contacts-link:focus-visible {
-  outline: 2px solid #7B61FF;
+  outline: 2px solid #AF4FFF;
   outline-offset: -1px;
 }
 
@@ -1323,7 +1346,7 @@ button {
 }
 
 .subscription-button:focus-visible {
-  outline: 2px solid #7B61FF;
+  outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
 
@@ -1551,7 +1574,8 @@ button {
 
 .html-academy-link:focus-visible {
   fill: #FFC700;
-  border: 1px solid #AF4FFF;
+  outline: 1px solid #AF4FFF;
+  outline-offset: 2px;
 }
 
 .frame {
@@ -1808,7 +1832,7 @@ button {
   line-height: 50px ;
   color: #000000;
   margin: 0;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   padding: 0;
 }
 
@@ -1817,6 +1841,7 @@ button {
   flex-wrap: wrap;
   padding: 0;
   margin: 0;
+  margin-top: 15px;
 }
 
 .breadcrumbs-item {
@@ -1859,6 +1884,7 @@ button {
   font-size: 16px ;
   line-height: 19px ;
   margin: 0;
+  margin-bottom: -2px;
   padding: 0;
   padding: 25px 0px 25px 0px;
   text-transform: uppercase;
@@ -1876,16 +1902,21 @@ button {
   padding: 0;
   border: none;
   border-top: 2px solid #000000;
+  margin-bottom: 10px;
+}
+
+.catalog-filter-group-radio {
+  margin-bottom: 14px;
 }
 
 .catalog-titles-filter {
-  margin-bottom: 35px;
+  margin-bottom: 34px;
 }
 
 /* Range */
 .range-group {
-  height: 95px;
-  margin-bottom: 35px;
+  min-height: 95px;
+  margin-bottom: 32px;
 }
 
 .range {
@@ -1935,7 +1966,7 @@ button {
 
 .toggle-max {
   top: -8px;
-  right: -8px;
+  right: -18px;
 }
 
 .range-wrapper-inputs {
@@ -1986,6 +2017,11 @@ button {
   padding: 0;
 }
 
+.filter-title {
+  margin-bottom: 27px;
+  letter-spacing: -0.3px;
+}
+
 input[type="number"]::-webkit-outer-spin-button,
 input[type="number"]::-webkit-inner-spin-button {
     -webkit-appearance: none;
@@ -2006,7 +2042,8 @@ input[type="number"]:focus {
 }
 
 .catalog-filter-item {
-  margin-bottom: 20px;
+  margin-top: -6px;
+  margin-bottom: 24px;
 }
 
 .control-checkbox {
@@ -2015,7 +2052,7 @@ input[type="number"]:focus {
   font-weight: 400;
   font-size: 16px;
   line-height: 19px;
-  padding-left: 39px;
+  padding-left: 36px;
   position: relative;
   display: block;
   cursor: pointer;
@@ -2039,8 +2076,8 @@ input[type="number"]:focus {
 
 .control-input[type="checkbox"]:checked + .control-mark::before {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   background-image: url("../images/svg-icon/tick.svg");
   background-repeat: no-repeat;
   background-position: center;
@@ -2049,8 +2086,8 @@ input[type="number"]:focus {
 
 .control-input[type="checkbox"]:focus-visible + .control-mark::after {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   content: "";
   outline: 2px solid #af4fff;
   outline-offset: 4px;
@@ -2060,8 +2097,8 @@ input[type="number"]:focus {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 2px solid #CCCCCC;
   border-radius: 3px;
 }
@@ -2073,8 +2110,8 @@ input[type="number"]:focus {
 
 .control-input-radio[type="radio"]:checked + .control-mark-radio::before {
   position: absolute;
-  top: 6px;
-  left: 6px;
+  top: 4px;
+  left: 4px;
   width: 8px;
   height: 8px;
   border-radius: 50%;
@@ -2084,8 +2121,8 @@ input[type="number"]:focus {
 
 .control-input-radio[type="radio"]:focus-visible + .control-mark-radio::after {
   position: absolute;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   content: "";
   outline: 2px solid #AF4FFF;
   outline-offset: 4px;
@@ -2095,8 +2132,8 @@ input[type="number"]:focus {
   position: absolute;
   top: 0;
   left: 0;
-  width: 20px;
-  height: 20px;
+  width: 16px;
+  height: 16px;
   border: 2px solid #CCCCCC;
   border-radius: 50%;
 }
@@ -2158,6 +2195,7 @@ input[type="number"]:focus {
 
 .catalog-filter-button {
   width: 220px;
+  margin-left: 2px;
 }
 
 .catalog-right-column {
@@ -2181,9 +2219,10 @@ input[type="number"]:focus {
   font-weight: 400;
   font-size: 18px;
   line-height: 30px;
-  width: 141px;
+  width: 139px;
   height: 30px;
   margin: 0;
+  margin-left: -13px;
   border: none;
   background-color: #F0F0F0;
 }
@@ -2246,7 +2285,7 @@ input[type="number"]:focus {
   display: grid;
   grid-template-columns: 360px 360px; /* Можно сделать repeat (2, 360px); */
   margin: 0;
-  margin-bottom: 44px;
+  margin-bottom: 42px;
   padding: 70px 40px 0px 40px;
   list-style-type: none;
   gap: 44px 40px;
@@ -2279,13 +2318,18 @@ input[type="number"]:focus {
 
 
 .product-card-image {
-  margin-bottom: 32px;
+  margin-bottom: 30px;
+}
+
+.product-card-image-margin {
+  margin-bottom: 28px;
 }
 
 .product-card-title {
   width: 232px;
   margin: 0;
   padding: 0;
+  letter-spacing: -0.02em;
 }
 
 .product-card-price {
@@ -2353,7 +2397,7 @@ input[type="number"]:focus {
   line-height: 19px;
   margin: 0;
   margin: 0px 40px 44px 40px;
-  padding: 15px 290.140px 15px 290.140px;
+  padding: 15px 288.140px 15px 292.140px;
   letter-spacing: 0.2em;
   text-transform: uppercase;
   background-color: #FFFFFF;
@@ -2372,7 +2416,7 @@ input[type="number"]:focus {
 
 }
 
-.pagination {
+.pagination-catalog {
   display: flex;
   align-items: center;
   background-color: #F0F0F0;
@@ -2421,14 +2465,14 @@ input[type="number"]:focus {
 }
 
 .pagination-link {
-  display: flex;
-  align-items: center;
-  justify-content: center;
   Font-family: "rubik";
   font-style: normal;
   font-weight: 400;
   font-size: 16px ;
-  line-height: 20px ;
+  line-height: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   margin: 0;
   padding: 0;
   text-decoration: none;
@@ -2452,8 +2496,15 @@ input[type="number"]:focus {
 }
 
 .pagination-link-prev {
+  Font-family: "raleway";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px ;
+  line-height: 21px;
   text-decoration: none;
   padding: 25px 25px 25px 25px;
+  color: #000000;
+  letter-spacing: 0.2em;
 }
 
 .pagination-item-back, .pagination-item-next {
@@ -2471,6 +2522,7 @@ input[type="number"]:focus {
 .pagination-item-next {
   margin: 0;
   margin-left: auto;
+  margin-right: 5px;
 }
 
 .pagination-item-back:hover, .pagination-item-next:hover {
