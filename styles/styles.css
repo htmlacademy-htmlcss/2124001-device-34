@@ -347,7 +347,7 @@ body {
   height: 50px;
   width: 50px;
   outline: none;
-  z-index: 100;
+  z-index: 40;
 }
 
 .button-uncover-categories:hover {
@@ -427,7 +427,7 @@ body {
   padding-right: 60px;
   padding-bottom: 27px;
   margin: 0 auto;
-  display: none;
+  display: ;
   z-index: 3;
 }
 
@@ -1593,8 +1593,8 @@ body {
   width: 100%;
   height: 100%;
   background-color: rgba(240, 240, 240, 0.9);
-  z-index: 13;
-  display: none;
+  z-index: 53;
+  display: ;
 }
 
 .modal {
@@ -1637,8 +1637,6 @@ body {
   outline: 2px solid #AF4FFF;
   outline-offset: 2px;
 }
-
-
 
 .modal-title {
   font-family: "raleway";
@@ -1693,6 +1691,18 @@ body {
   padding: 0px 0px 0px 20px;
 }
 
+.name-field {
+  background-image: url(../images/svg-icon/modal-icon-name.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
+.email-field {
+  background-image: url(../images/svg-icon/modal-icon-email.svg);
+  background-repeat: no-repeat;
+  background-position: right 20px center;
+}
+
 .clarification-field {
   width: 520px;
 }
@@ -1715,7 +1725,7 @@ body {
 
 .wrong-email {
   color: #FF3D3D;
-  display: none;
+  display: ;
 }
 
 .container-amount-products {
@@ -2543,7 +2553,7 @@ input[type="number"]:focus {
   position: absolute;
   top: 40px;
   left: -137px;
-  z-index: 3;
+  z-index: 13;
   box-sizing: border-box;
   width: 320px;
   padding: 0px;
@@ -2551,7 +2561,7 @@ input[type="number"]:focus {
   color: #FFFFFF;
   background-color: #000000;
   min-height: 301px;
-  display: none;
+  display: ;
 }
 
 .popover-vector {
